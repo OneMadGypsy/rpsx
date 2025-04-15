@@ -81,9 +81,8 @@ while input(PROMPT1) == 'y':
     # computer choice
     c = random.randint(0,L*M-1)//M
     
-    /* BRANCHLESS RPS LOGIC
-       The below replaces the entire "wall-of-if" that is seen in most "Rock, Paper, Scissors" solutions
-    */
+    ## BRANCHLESS RPS LOGIC
+    ## replaces the entire "wall-of-if" that is seen in most "Rock, Paper, Scissors" solutions
         
     # rpsx solution
     n = (TIE+u-c)%L
