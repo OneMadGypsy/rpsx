@@ -82,16 +82,16 @@ while input(PROMPT1) == 'y':
     # computer choice
     c = random.randint(0,L*M-1)//M
     
-    ## BRANCHLESS RPS LOGIC
-        
-    # rpsx solution - replaces the entire "wall-of-if" that is seen in most "Rock, Paper, Scissors" solutions
+    ## RPSX SOLUTION
+    # - replaces the entire "wall-of-if" that is seen in most "Rock, Paper, Scissors" solutions
+    # - indicates if pieces are not adjacent (draw), if greater than 3 choices
     n = (TIE+u-c)%L
     
     # update stats
-    wins += (w := not n)    # win
-    ties += (t := n==TIE)   # tie
-    loss += (l := n==LOSE)  # lose
-    draw += (0 < n < LOSE)  # draw = choices are not compatible
+    wins += (w := not n)   
+    ties += (t := n==TIE)  
+    loss += (l := n==LOSE) 
+    draw += (0 < n < LOSE)  # choices are not compatible
     
     # print console
     print(PROMPT3.format(PIECES[u].title(), PIECES[c].title()))
