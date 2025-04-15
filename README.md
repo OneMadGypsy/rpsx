@@ -62,6 +62,7 @@ def display():
 display()
 
 ## GAME LOOP
+
 while input(PROMPT1) == 'y':
     # user choice
     while True:
@@ -82,9 +83,8 @@ while input(PROMPT1) == 'y':
     c = random.randint(0,L*M-1)//M
     
     ## BRANCHLESS RPS LOGIC
-    ## replaces the entire "wall-of-if" that is seen in most "Rock, Paper, Scissors" solutions
         
-    # rpsx solution
+    # rpsx solution - replaces the entire "wall-of-if" that is seen in most "Rock, Paper, Scissors" solutions
     n = (TIE+u-c)%L
     
     # update stats
