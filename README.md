@@ -25,7 +25,6 @@ DESC    = TITLE #", ".join(p.title() for p in PIECES)
 L       = len(PIECES) #total pieces
 TIE     = L-1         #tie  value
 LOSE    = L-2         #lose value
-M       = 10          #multiplier for randint(0, L*M-1)//M
 
 # start prompt
 PROMPT1 = "\nPlay (y or n)? "
@@ -80,7 +79,7 @@ while input(PROMPT1) == 'y':
             break
         
     # computer choice
-    c = random.randint(0,L*M-1)//M
+    c = random.getrandbits(8) % L   
     
     ## RPSX SOLUTION
     # - replaces the entire "wall-of-if" that is seen in most "Rock, Paper, Scissors" solutions
