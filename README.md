@@ -41,7 +41,7 @@ OUTCOME = ("Draw", "Won", "Lost", "Tied")
 PROMPT4 = "\nYou {}!"
 
 # scoring
-SCOREBOARD = "\nwins\t: {}\nties\t: {}\nlosses\t: {}"+("","\ndraws\t: {}")[L>3]
+SCOREBOARD = "\nwins\t: {}\nties\t: {}\nlosses\t: {}\ndraws\t: {}"
 
 # running totals / stats
 wins = 0
